@@ -1,0 +1,33 @@
+[user]
+	name = Gustavo Dutra
+	email = gustavotkg@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+  pager = less -+$LESS -RS
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https
+
+[push]
+default = current
+
+[merge]
+ff = false
+
+[alias]
+sync = fetch -pa
+graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset) - %C(dim green)%an%C(reset)%n''          %C(blue)%s%C(reset)' --all
+force = push -f origin
+st = status -sb
+df = diff
+dfd = diff --cached
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+rhead = reset HEAD --
+
+[pull]
+rebase = true
